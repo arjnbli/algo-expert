@@ -21,8 +21,6 @@ class Node:
         while queue:
             vertex = queue.pop(0)
             array.append(vertex.name)
-            visited.add(vertex)
             for child in vertex.children:
-                if child not in visited:
-                    queue.append(child)
+                queue.append(child)
         return array
