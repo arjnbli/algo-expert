@@ -18,5 +18,6 @@ def bfs(startVertex):
             visited.add(vertex)
             visit(vertex)
             for adjacentVertex in vertex.adjacent:
-                queue.append(adjacentVertex)
+                if adjacentVertex not in visited:
+                    queue.append(adjacentVertex)
     return 
